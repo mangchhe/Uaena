@@ -1,3 +1,7 @@
+/*
+작성자 : 하주현
+작성일 : 20/09/07
+ */
 var express = require('express');
 var app = express();
 var ejs = require('ejs');
@@ -10,7 +14,7 @@ app.engine('ejs', ejs.renderFile);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-router = require(__dirname + '/router/controller')(app);
+router = require(__dirname + '/router/user')(app);
 
 var server = app.listen(2000, function () {
     console.log('서버가 가동되었습니다.');
